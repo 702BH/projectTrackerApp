@@ -13,15 +13,7 @@ library(shiny)
 function(input, output, session) {
   
   observeEvent(input$change_text_btn, {
-    
-    jsCode <- "
-    console.log('hi');
-    var newContent = 'We changed this using JavaScript';
-    document.getElementById('dynamic_h').innerText = newContent;
-
-    "
-    
-    session$sendCustomMessage(message = jsCode)
+    print("pressed")
     
   })
 

@@ -15,6 +15,7 @@ fluidPage(
   conditionalPanel(
     condition = "input.show_html ==true",
     HTML("<h1 id = 'dynamic_h'>This is conditional raw HTML<h1>"),
-    actionButton("change_text_btn", "Change Text")
+    actionButton("change_text_btn", "Change Text"),
+    htmlOutput("dynamic_text")
   )
 )
